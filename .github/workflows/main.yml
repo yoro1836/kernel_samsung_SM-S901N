@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-kernel:
+    name: Build Kernel
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Build
+        uses: dabao1955/kernel_build_action@main
+        with:
+          kernel-url: https://github.com/yoro1836/kernel_samsung_SM-S901N.git
+          branch: main
+          config: defconfig
+          arch: arm64
+          aosp-gcc: true
+          aosp-clang: true
+          python-2.7: true
+          android-version: 12
