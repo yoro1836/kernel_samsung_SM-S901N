@@ -18,7 +18,5 @@ jobs:
           aosp-gcc: true
           aosp-clang: true
           python-2.7: true
-          apatch: true
-          kvm: true
           release: true
           android-version: 12
