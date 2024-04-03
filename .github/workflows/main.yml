@@ -13,9 +13,12 @@ jobs:
         with:
           kernel-url: https://github.com/yoro1836/kernel_samsung_SM-S901N.git
           branch: main
-          config: defconfig
+          config: "arch/arm64/configs/defconfig"
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
           python-2.7: true
+          apatch: true
+          kvm: true
+          release: true
           android-version: 12
